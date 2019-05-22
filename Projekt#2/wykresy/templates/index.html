@@ -1,0 +1,32 @@
+{% include "header.html" %}
+
+<div class="container">
+    <h1>Witaj w aplikacji 'Projekt #2'</h1>
+
+    <h3>Oto zasoby wymagające zalogowania</h3>
+    {% for foo in ['graph', 'add_user', 'admin.index'] %}
+
+        <a href="{{ url_for(foo) }}" class="btn btn-primary" role="button" aria-pressed="true">
+            {{ foo }}
+        </a>
+        <br><br>
+
+    {% endfor %}
+    <a href="{{ url_for('statystyki') }}" class="btn btn-info" role="button" aria-pressed="true">statystyki</a>
+    <br><br>
+
+    <h3>Oto zasoby dostępne dla niezalogowanego użytkownika</h3>
+
+    <a href="{{ url_for('login') }}" class="btn btn-success" role="button" aria-pressed="true">login</a>
+    <br><br>
+
+    <a href="{{ url_for('logout') }}" class="btn btn-danger" role="button" aria-pressed="true">logout</a>
+    <br><br>
+
+    <a href="{{ url_for('pomocnik') }}" class="btn btn-info" role="button" aria-pressed="true">pomocnik</a>
+
+    {% include "flashes.html" %}
+
+</div>
+
+{% include "footer.html" %}

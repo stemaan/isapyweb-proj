@@ -1,0 +1,11 @@
+
+<h3>Określ parametry wykresu</h3>
+
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ form.marka.label }} {{ form.marka }}
+    {{ form.rocznik_min.label }} {{ form.rocznik_min }}
+    {{ form.rocznik_max.label }} {{ form.rocznik_max }}
+    <input type="submit" value="Go">
+</form>
+
