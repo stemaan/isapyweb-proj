@@ -1,0 +1,26 @@
+Dokumentacja generowana przy użyciu narzędzia Sphinx:
+
+1. Zainstaluj moduł:      pip install sphinx
+
+2. Utwórz folder docs_temp
+
+3. Do utworzonego folderu przekopiuj pliki źródłowe *.py
+
+4. W katalogu z plikami źródłowymi wykonaj:   sphinx-quickstart
+	- podaj obowiązkowo:
+		- Project name
+		- Author name(s)
+		- autodoc:  y  (!)
+
+5. Do utworzonego folderu przekopiuj pliki *.rst (nadpisz index.rst) i *.jpg
+
+6. W pliku conf.py odkomentuj 3 linijki:
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+
+7. Wydaj polecenie make html
+
+8. Ciesz się elegancką dokumentacją
+
+9. Opcjonalnie: w pliku conf.py zmień  html_theme = 'alabaster' na html_theme = 'classic' - więcej info na http://www.sphinx-doc.org/en/master/theming.html
